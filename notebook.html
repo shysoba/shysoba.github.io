@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>[NOTEBOOK]</title>
+
+    <!-- jquery file -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+
+    <!-- icon-->
+	<link rel="icon" type="image/png" href="assets/favicon.png">
+
+<style>
+    @font-face {
+            font-family: 'DOS';
+            src: url('https://ribose.neocities.org/fonts/Px437_DOS-V_re_ANK24.ttf') format('truetype');
+    } 
+    body {
+      margin: 0px;
+      background-color: black;
+      font-family: 'DOS', mon;
+      cursor: pointer;
+    }
+    table, th, td {
+      border: 1px solid linen;
+      border-collapse: collapse;
+      text-align: center;
+      font-size: 15px;
+    }    
+    table {
+      width: 100vw;
+      height: 100vh;
+      background-image: url('assets/cyan.gif');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    
+    tr {
+      opacity: 0;
+    }
+    
+    tr:hover {
+      opacity: 1;
+      color: midnightblue;
+      background-color: linen;
+     
+    }
+    
+    a {
+      color: darkblue;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      color: midnightblue;
+      text-decoration: italic;
+    }
+    </style>
+    
+</head>
+<body>
+  <script>
+    $(document).ready(function() {
+        let isOpaque = false;
+
+        $('table').click(function() {
+            if (isOpaque) {
+                $('table, th, td').animate({ opacity: '0' }, 500); 
+            } else {
+                $('table, th, td').animate({ opacity: '1' }, 500); 
+            }
+            isOpaque = !isOpaque; 
+        });
+    });
+</script>
+
+<table>
+  <tr>
+    <td align="center" colspan="5">⊛ ouch ⊛</td>
+  </tr>
+  <tr>
+    <td>today</td>
+  </tr>
+  <tr>
+  <td>i</td>
+  </tr>
+  <tr>
+   <td>have</td>
+  </tr>
+  <tr>
+   <td>a</td>
+  </tr>
+  <tr>
+   <td>✴ ✴ ✴ ✴ ✴ headache ✴ ✴ ✴ ✴ ✴</td>
+  </tr>
+  <tr>
+    <td align="center" colspan="5"><a href="index.html">go back?</a></td>
+  </tr>
+</table>
+
+</body>
+</html>
+

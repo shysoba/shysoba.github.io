@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[ANALOG]</title>
+    
+    <!-- jquery file -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+
+    <!-- icon-->
+	<link rel="icon" type="image/png" href="assets/favicon.png">
+
+</head>
+<body>
+    <style>
+        @font-face {
+            font-family: 'DOS';
+            src: url('https://ribose.neocities.org/fonts/Px437_DOS-V_re_ANK24.ttf') format('truetype');
+    }
+        *,
+        *::before,
+        *::after {
+          margin: 0;
+          box-sizing: border-box;
+        }
+  
+        html,
+        body {
+        font-family: 'DOS';
+        font-size: 16px;
+        background: /*#e5e5ce*/ #EBEBE8;
+        background-image: url('assets/stars.jpg');
+        background-position: center;
+        background-repeat: repeat;
+        }
+  
+        .album {
+          width: 170rem;
+          position: absolute;
+        }
+  
+        img {
+            display: none;
+          padding: 2rem;
+          background: url("https://cdn.glitch.com/f84fa94e-9260-404b-8c1f-a74cf5786f4a%2F10219037px2.jpg?v=1600619726383");
+          position: absolute;
+          box-shadow: 0 0 5px rgba(58, 58, 58, 0.0817);
+        }
+        #show {
+            cursor: pointer;
+            color: white;
+        }
+  
+        .sq,
+        .vr {
+          width: 30rem;
+        }
+  
+        .hr {
+          height: 30rem;
+        }
+  
+        .desc {
+          top: 1rem;
+          left: 1rem;
+          width: max-content;
+          position: absolute;
+          padding: 2rem;
+          color: white;
+          font-style: italic;
+        }
+  
+        .one {
+          top: 20rem;
+          left: 30rem;
+        }
+  
+        .two {
+          top: 60rem;
+          right: 30rem;
+        }
+  
+        .three {
+          top: 5rem;
+          right: 10rem;
+        }
+  
+        .four {
+          top: 80rem;
+          left: 3rem;
+        }
+  
+        .five {
+          top: 100rem;
+          left: 50rem;
+        }
+  
+        .six {
+          top: 150rem;
+          right: 50rem;
+        }
+  
+        .seven {
+          top: 55rem;
+          left: 40rem;
+        }
+  
+        .eight {
+          top: 140rem;
+          left: 10rem;
+        }
+  
+        .nine {
+          top: 110rem;
+          right: 5rem;
+        }
+  
+        a {
+          color: inherit;
+        }
+  
+        @media all and (max-width: 768px) {
+          html,
+          body {
+            font-size: 11px;
+          }
+        }
+      </style>
+
+<h1></h1>
+
+
+<div class="album">
+  <div class="desc">
+    <h2>
+      Dream Collection
+    </h2>
+    <p>
+      <br>
+      These are some of my dreamier photos from <br>
+      the time I used to take more analog ones.<br><br>
+      Scroll up, down, left and right to see them.<br><br>
+      <a href="#" id="show">Show me.</a><br>
+
+      <script>
+        function fadeImages(images, index) {
+            $(images[index]).fadeOut(500, function() {
+                $(images[index]).fadeIn(500, function() {
+                    index = (index + 1) % images.length; 
+                    fadeImages(images, index); 
+                });
+            });
+        }
+    
+        $(document).ready(function () {
+            $('#show').click(function () {
+                $('.album img').fadeIn(1000); 
+                var images = $('.album img');
+                var randomIndex = Math.floor(Math.random() * images.length);
+                fadeImages(images, randomIndex); 
+            });
+        });
+    </script>
+
+      <a href="index.html">Go back?</a>
+    </p>
+  </div>
+
+  <img
+    class="one sq"
+    title="It was the first week of spring"
+    alt="It was the first week of spring"
+    src="assets/1.jpeg"
+  />
+  <img
+    class="two hr"
+    title="We were stopping for food during our road trip"
+    alt="We were stopping for food during our road trip"
+    src="assets/2.jfif"
+  />
+  <img
+    class="three hr"
+    title="The air suddenly felt heavy and I had a hard time breathing"
+    alt="The air suddenly felt heavy and I had a hard time breathing"
+    src="assets/3.jfif"
+  />
+  <img
+    class="four vr"
+    title="Whenever I got up one staircase, there was another one waiting"
+    alt="Whenever I got up one staircase, there was another one waiting"   
+    src="assets/4.jpg"
+  />
+  <img
+    class="five hr"
+    title="A breeze came and the air got easier to breathe"
+    alt="A breeze came and the air got easier to breathe" 
+    src="assets/5.jfif"
+  />
+  <img
+    class="six hr"
+    title="They got rid of all the old statues and replaced them with new ones"
+    alt="They got rid of all the old statues and replaced them with new ones" 
+    src="assets/6.jfif"
+  />
+  <img
+    class="seven hr"
+    title="I was finally there, at the end of the hallway"
+    alt="I was finally there, at the end of the hallway" 
+    src="assets/7.jfif"
+  />
+  <img
+    class="eight hr"
+    title="I couldn't see where we were driving, but I had a feeling we were heading in the right direction"
+    alt="I couldn't see where we were driving, but I had a feeling we were heading in the right direction" 
+    src="assets/8.jfif"
+  />
+  <img
+    class="nine hr"
+    title="I found an abandoned restaurant kitchen under a bridge"
+    alt="I found an abandoned restaurant kitchen under a bridge" 
+    src="assets/9.jpg"
+  />
+</div>
+
+
+</body>
+</html>
